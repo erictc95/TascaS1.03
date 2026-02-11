@@ -28,13 +28,13 @@ public class CapitalGameMain {
             String[] parts = line.split(",");
             countriesMap.put(parts[0], parts[1]);
         }
-        sc.nextLine();
+        sc.close();
 
-        //Scanner input = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         System.out.println("Player 1 name: ");
-        String player1 = sc.nextLine();
+        String player1 = input.nextLine();
         System.out.println("Player 2 name: ");
-        String player2 = sc.nextLine();
+        String player2 = input.nextLine();
 
         ArrayList<String> countriesList = new ArrayList<>(countriesMap.keySet());
         Collections.shuffle(countriesList);
@@ -43,10 +43,21 @@ public class CapitalGameMain {
             String country = countriesList.get(i);
             if (i % 2 == 0) {
                 System.out.println(player1 + ", capital de " + country + ": ");
-                String answer = sc.nextLine();
+                String answer1 = input.nextLine();
+                if (answer1.equalsIgnoreCase(countriesMap.get(country))) {
+                    totalPointsP1++;
+                } else {
+                    System.out.println(player2 + ", capital de " + country + ": ");
+                    String answer2 = input.nextLine();
+                    if (answer2.equalsIgnoreCase(countriesMap.get(country))) {
+                        totalPointsP2++;
+                    }
+                }
             }
         }
 
+        System.out.println(player1 + " score: " + totalPointsP1);
+        System.out.println(player1 + " score: " + totalPointsP2);
 
     }
 }
