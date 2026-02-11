@@ -31,8 +31,11 @@ public class MonthsMain {
             monthsSet.add(new Month("January"));
         }
 
-
-
+        Iterator<Month> it = monthsSet.iterator();
+        while (it.hasNext()) {
+            Month month = it.next();
+            System.out.println(month);
+        }
 
     }
 
