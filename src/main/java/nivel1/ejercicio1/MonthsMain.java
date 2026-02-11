@@ -1,7 +1,6 @@
 package nivel1.ejercicio1;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
 
@@ -21,6 +20,8 @@ public class MonthsMain {
         months.add(new Month("October"));
         months.add(new Month("November"));
         months.add(new Month("December"));
+        months.add(7, new Month("August"));
+
 
         for (int i = 0; i < months.size(); i++ ) {
             System.out.println(months.get(i));
@@ -28,12 +29,18 @@ public class MonthsMain {
 
         for (int i = 0; i < months.size(); i++ ) {
             monthsSet.add(months.get(i));
-            monthsSet.add(new Month("January"));
         }
 
+        monthsSet.add(new Month("January"));
+
+        //Recorrer HashSet con Iterator
         Iterator<Month> it = monthsSet.iterator();
         while (it.hasNext()) {
             Month month = it.next();
+            System.out.println(month);
+        }
+
+        for (Month month : monthsSet) {
             System.out.println(month);
         }
 
