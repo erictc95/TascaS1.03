@@ -25,7 +25,7 @@ public class CapitalGameMain {
 
         while (sc.hasNextLine()) {
             String line = sc.nextLine();
-            String[] parts = line.split(",");
+            String[] parts = line.split(" ");
             countriesMap.put(parts[0], parts[1]);
         }
         sc.close();
@@ -45,11 +45,13 @@ public class CapitalGameMain {
                 System.out.println(player1 + ", capital de " + country + ": ");
                 String answer1 = input.nextLine();
                 if (answer1.equalsIgnoreCase(countriesMap.get(country))) {
+                    System.out.println("Correct! +1 point");
                     totalPointsP1++;
                 } else {
                     System.out.println(player2 + ", capital de " + country + ": ");
                     String answer2 = input.nextLine();
                     if (answer2.equalsIgnoreCase(countriesMap.get(country))) {
+                        System.out.println("Correct! +1 point");
                         totalPointsP2++;
                     }
                 }
