@@ -18,6 +18,17 @@ public class RestaurantsMain {
             System.out.println(r);
         }
 
+        ArrayList<Restaurant> restaurantsList = new ArrayList<>();
+        restaurantsList.add(new Restaurant("La Pampara", 5));
+        restaurantsList.add(new Restaurant("La Pampara", 7));
+        restaurantsList.add(new Restaurant("Volcanic", 8));
+        restaurantsList.add(new Restaurant("La Bodegueta", 9));
+        restaurantsList.add(new Restaurant("Volcanic", 8));
 
+        Collections.sort(restaurantsList);
+
+        for (Restaurant r : restaurants) {
+            System.out.println(r);
+        }
     }
 }
