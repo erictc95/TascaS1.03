@@ -65,7 +65,9 @@ public class CapitalGameMain {
         System.out.println(player1 + " Score: " + totalPointsP1);
         System.out.println(player1 + " Score: " + totalPointsP2);
 
-
-
+        FileWriter fileWriter = new FileWriter("Classification.txt");
+        fileWriter.write(player1 + ", Score = " + totalPointsP1 + "\n");
+        fileWriter.write(player2 + ", Score = " + totalPointsP2 + "\n");
+        fileWriter.close();
     }
 }
