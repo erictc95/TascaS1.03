@@ -1,0 +1,2 @@
+Daniel, Score = 8
+Carlos, Score = 5
