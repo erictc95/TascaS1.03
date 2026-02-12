@@ -1,4 +1,4 @@
-package nivel1.ejercicio1;
+package nivel1.ejercicio1.months;
 
 
 public class Month {

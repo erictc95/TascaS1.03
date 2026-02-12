@@ -1,8 +1,7 @@
-package nivel2.ejercicio2;
+package nivel2.ejercicio2.restaurants2;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.HashSet;
 
 public class RestaurantsMain {
     public static void main(String[] args) {

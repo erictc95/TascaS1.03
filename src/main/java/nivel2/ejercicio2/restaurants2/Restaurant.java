@@ -1,4 +1,4 @@
-package nivel2.ejercicio2;
+package nivel2.ejercicio2.restaurants2;
 
 
 import java.util.Objects;

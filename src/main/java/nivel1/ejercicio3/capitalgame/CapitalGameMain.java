@@ -1,4 +1,4 @@
-package nivel1.ejercicio3;
+package nivel1.ejercicio3.capitalgame;
 
 import java.io.*;
 import java.util.ArrayList;

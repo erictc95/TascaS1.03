@@ -1,4 +1,4 @@
-package nivel1.ejercicio1;
+package nivel1.ejercicio1.months;
 
 import java.util.ArrayList;
 import java.util.HashSet;

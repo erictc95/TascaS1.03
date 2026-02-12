@@ -1,4 +1,4 @@
-package nivel1.ejercicio2;
+package nivel1.ejercicio2.lists;
 
 import java.util.ArrayList;
 import java.util.ListIterator;

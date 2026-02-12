@@ -1,4 +1,4 @@
-package nivel2.ejercicio1;
+package nivel2.ejercicio1.restaurants1;
 
 import java.util.HashSet;
 
