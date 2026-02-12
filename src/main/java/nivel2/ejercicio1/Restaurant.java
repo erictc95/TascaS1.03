@@ -1,6 +1,8 @@
 package nivel2.ejercicio1;
 
 
+import java.util.Objects;
+
 public class Restaurant {
     private String name;
     private int score;
@@ -36,7 +38,7 @@ public class Restaurant {
 
     @Override
     public int hashCode() {
-        return super.hashCode();
+        return Objects.hash(name, score);
     }
 
     @Override
@@ -48,6 +50,6 @@ public class Restaurant {
             return false;
         }
         Restaurant restaurant = (Restaurant) obj;
-        return name.equals(restaurant.name);
+        return Objects.equals(name, restaurant.name) && score == restaurant.score;
     }
 }
