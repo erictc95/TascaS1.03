@@ -15,5 +15,6 @@ public class RestaurantsMain {
         for (Restaurant r : restaurants) {
             System.out.println(r);
         }
+        //System.out.println(restaurants);
     }
 }

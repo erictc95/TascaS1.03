@@ -9,16 +9,18 @@ import java.util.Scanner;
 public class CapitalGameMain {
     private static int totalPointsP1;
     private static int totalPointsP2;
+    private static final int totalRounds = 20;
+    private static final String routeCountries = "countries.txt";
+    private static final String routeClassification = "Classification.txt";
 
     public static void main(String[] args) throws IOException {
-        try {
-            Scanner sc = new Scanner(new File("countries.txt"));
-        } catch (Exception e) {
-            System.out.println("File cannot found!");
-        }
 
-        File file = new File ("countries.txt");
-        Scanner sc = new Scanner(file);
+        File file = new File(routeCountries);
+        if (!file.exists()) {
+            System.out.println("The file not found!");
+            return;
+        }
+        Scanner sc = new Scanner(new File(routeCountries));
 
         HashMap<String, String> countriesMap = new HashMap<>();
 
@@ -38,7 +40,7 @@ public class CapitalGameMain {
         ArrayList<String> countriesList = new ArrayList<>(countriesMap.keySet());
         Collections.shuffle(countriesList);
 
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < totalRounds; i++) {
             String country = countriesList.get(i);
             String correctCapital = countriesMap.get(country);
             if (i % 2 == 0) {
@@ -65,7 +67,7 @@ public class CapitalGameMain {
         System.out.println(player1 + " Score: " + totalPointsP1);
         System.out.println(player1 + " Score: " + totalPointsP2);
 
-        FileWriter fileWriter = new FileWriter("Classification.txt");
+        FileWriter fileWriter = new FileWriter(routeClassification, true);
         fileWriter.write(player1 + ", Score = " + totalPointsP1 + "\n");
         fileWriter.write(player2 + ", Score = " + totalPointsP2 + "\n");
         fileWriter.close();
