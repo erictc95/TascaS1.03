@@ -9,7 +9,7 @@ import java.util.Scanner;
 public class CapitalGameMain {
     private static int totalPointsP1;
     private static int totalPointsP2;
-    private static final int totalRounds = 20;
+    private static final int TOTAL_ROUNDS = 20;
     private static final String routeCountries = "countries.txt";
     private static final String routeClassification = "Classification.txt";
 
@@ -40,7 +40,7 @@ public class CapitalGameMain {
         ArrayList<String> countriesList = new ArrayList<>(countriesMap.keySet());
         Collections.shuffle(countriesList);
 
-        for (int i = 0; i < totalRounds; i++) {
+        for (int i = 0; i < TOTAL_ROUNDS; i++) {
             String country = countriesList.get(i);
             String correctCapital = countriesMap.get(country);
             if (i % 2 == 0) {
