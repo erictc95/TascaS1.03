@@ -22,15 +22,11 @@ public class MonthsMain {
         months.add(new Month("December"));
         months.add(7, new Month("August"));
 
-        //For Each
+
         for (Month month : months) {
             System.out.println(month);
         }
 
-        /* For traditional
-        for (int i = 0; i < months.size(); i++ ) {
-            System.out.println(months.get(i));
-        }*/
 
         System.out.println("----------------------------------------");
         for (int i = 0; i < months.size(); i++ ) {
@@ -40,7 +36,6 @@ public class MonthsMain {
         monthsSet.add(new Month("January"));
 
 
-        //Recorrer HashSet con Iterator
         Iterator<Month> it = monthsSet.iterator();
         while (it.hasNext()) {
             Month month = it.next();

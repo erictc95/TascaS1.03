@@ -1,4 +1,3 @@
 Daniel, Score = 8
 Carlos, Score = 5
-planet - Score: 2
-gay - Score: 1
+
