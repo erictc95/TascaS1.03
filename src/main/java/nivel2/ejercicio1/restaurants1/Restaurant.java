@@ -4,8 +4,8 @@ package nivel2.ejercicio1.restaurants1;
 import java.util.Objects;
 
 public class Restaurant {
-    private String name;
-    private int score;
+    private final String name;
+    private final int score;
 
     public Restaurant (String name, int score) {
         this.name = name;
@@ -21,19 +21,13 @@ public class Restaurant {
     }
 
     @Override
-    public int hashCode() {
-        return Objects.hash(name, score);
+    public boolean equals(Object o) {
+        if (!(o instanceof Restaurant that)) return false;
+        return score == that.score && Objects.equals(name, that.name);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof Restaurant)) {
-            return false;
-        }
-        Restaurant restaurant = (Restaurant) obj;
-        return Objects.equals(name, restaurant.name) && score == restaurant.score;
+    public int hashCode() {
+        return Objects.hash(name, score);
     }
 }
