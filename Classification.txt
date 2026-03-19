@@ -1,3 +1,5 @@
 Daniel, Score = 8
 Carlos, Score = 5
 
+ines - Score: 5
+david - Score: 4
