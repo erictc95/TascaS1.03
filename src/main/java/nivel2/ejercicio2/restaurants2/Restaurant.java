@@ -37,27 +37,21 @@ public class Restaurant implements Comparable<Restaurant> {
     }
 
     @Override
+    public boolean equals(Object o) {
+        if (!(o instanceof Restaurant that)) return false;
+        return score == that.score && Objects.equals(name, that.name);
+    }
+
+    @Override
     public int hashCode() {
         return Objects.hash(name, score);
     }
 
     @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (!(obj instanceof Restaurant)) {
-            return false;
-        }
-        Restaurant restaurant = (Restaurant) obj;
-        return Objects.equals(name, restaurant.name) && score == restaurant.score;
-    }
-
-    @Override
     public int compareTo(Restaurant other) {
-        int nameCoparision = this.name.compareTo(other.name);
-        if (nameCoparision != 0) {
-            return nameCoparision;
+        int nameComparison  = this.name.compareTo(other.name);
+        if (nameComparison  != 0) {
+            return nameComparison;
         }
         return Integer.compare(other.score, this.score);
     }
